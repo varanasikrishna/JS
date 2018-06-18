@@ -1,26 +1,90 @@
 import React, { Component } from 'react';
 import Header from '../header/header';
 import Tile from './tile';
+import LandingPage from './content/content';
 
-class landingpage extends Component {
-    constructor()
-    {
+class LandingPage extends Component {
+    constructor() {
         super();
-        this.skillInfo= [
+        this.skillInformation = [
             {
-                name :
-                description :
-                imgURL :
+                name: 'HTML',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'CSS',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'JS',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'React',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'Angular',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'Webpack',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'HTML',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'CSS',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'JS',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'React',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'Angular',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
+            },
+            {
+                name: 'Webpack',
+                description: 'aaaa',
+                imgURL: '/images/html.png'
             }
         ]
     }
     render() {
         return (
             <div>
-                <Header/>
+                <Header text="We are learning" />
+                <div className="container">
+                    {this.skillInformation.map(skill => {
+                        return (
+                            <Tile skillName={skill.name} skillDescription={skill.description}
+                                skillImg={skill.imgURL} />
+                        )
+                    })}
+                </div>
             </div>
         );
     }
 }
 
-export default landing-page;
+
+export default LandingPage;
