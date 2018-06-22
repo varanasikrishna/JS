@@ -2,21 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
-import { CommonComponent } from './common/common.component';
-import { InterviewerComponent } from './interviewer/interviewer.component';
-import { RegistrationComponent } from './registration/registration.component';
+import {RouterModule, Routes} from '@angular/router'
+import { RegistrationModule } from './registration/registration.Module';
+import { LoginComponent } from './registration/pages/login/login.component';
+import { LandingPageComponent } from './registration/pages/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
-    CommonComponent,
-    InterviewerComponent,
-    RegistrationComponent
+    LoginComponent,
+    LandingPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    RegistrationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

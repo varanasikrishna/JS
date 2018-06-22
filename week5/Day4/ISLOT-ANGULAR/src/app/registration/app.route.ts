@@ -1,19 +1,19 @@
-import { LandingPageComponent } from "./pages/landing-page/landing-page.component";
-import {Route}
-import { LoginComponent } from "./registration/pages/login/login.component";
-
-export const routes: Route[
+import {NgModule} from '@angular/core'
+import { LandingPageComponent } from './registration/pages/landing-page/landing-page.component';
+import {Route} from "@angular/router"
+import { LoginComponent } from './registration/pages/login/login.component';
+export const routes: Route[]=[
     {
         path : '',
-        loadchildren:LandingPageComponent
+        component:LandingPageComponent
     },
     {
         path:'landing-page',
-        loadchildren:LandingPageComponent
+        component:LandingPageComponent
     },
     {
         path:'login',
-        loadchildren:LoginComponent
+        component:LoginComponent
     }
 
 ]
