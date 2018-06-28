@@ -1,10 +1,17 @@
-import {NgModule} from '@angular/core'
-import {RouterModule,Route} from "@angular/router";
-import { AppComponent } from './app.component';
+import { Route } from '@angular/router';
 
-export const route: Route[]=[
+
+export const appRoutes: Route[] = [
     {
-        path : '',
-        loadChildren:'./registration/registration.module#RegistrationModule'
+        path: '',
+        loadChildren: './registration/registration.module#RegistrationModule'
+    },
+    {
+        path: 'admin',
+        loadChildren: './admin/admin.module#AdminModule'
+    },
+    {
+        path: 'interviewer',
+        loadChildren: './interviewer/interviewer.module#InterviewerModule'
     }
-]
+];

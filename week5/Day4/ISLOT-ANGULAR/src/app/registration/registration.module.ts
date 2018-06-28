@@ -5,16 +5,18 @@ import { LoginComponent } from './pages/login/login.component';
 import { AdminModule } from '../admin/admin.module';
 import { InterviewerModule } from '../interviewer/interviewer.module';
 import { RouterModule } from '@angular/router';
-import { route } from './registration-routes';
+import { registrationRoutes } from './registration-routes';
+import { AdminSignupComponent } from './pages/admin-signup/admin-signup.component';
+import { InterviewerSignupComponent } from './pages/interviewer-signup/interviewer-signup.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AdminModule,
     InterviewerModule,
-    RouterModule.forChild(route)
+    RouterModule.forChild(registrationRoutes)
   ],
-  declarations: [LandingPageComponent, LoginComponent]
+  declarations: [LandingPageComponent, LoginComponent, AdminSignupComponent, InterviewerSignupComponent]
 })
 
 export class RegistrationModule { }
